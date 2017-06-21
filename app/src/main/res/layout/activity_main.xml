@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.clzbj.www.shuttlewild.MainActivity">
+
+
+
+    <FrameLayout
+
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+
+        <TabHost
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@android:id/tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/campus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+
+                        android:gravity="center">
+
+
+                        <EditText
+                            android:layout_width="250dp"
+                            android:layout_height="40dp"
+                            android:hint="From"/>
+                        <Space
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            />
+                        <EditText
+                            android:layout_width="250dp"
+                            android:layout_height="40dp"
+                            android:hint="To"/>
+                        <Space
+                            android:layout_width="fill_parent"
+                            android:layout_height="80dp"
+                            />
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="false"
+                            android:background="@drawable/button"
+                            android:text="Get schedule" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/wild"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+
+
+
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/red"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/user"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:background="@color/red"
+            android:layout_weight="1"
+            android:onClick="popUserMenu"
+            android:src="@drawable/user"
+            />
+        <Space
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"/>
+        <ImageButton
+            android:id="@+id/setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:onClick="popSettingMenu"
+            android:background="@color/red"
+            android:layout_weight="1"
+            android:src="@drawable/setting"/>
+
+    </LinearLayout>
+
+</LinearLayout>
